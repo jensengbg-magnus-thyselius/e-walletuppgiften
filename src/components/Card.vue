@@ -1,11 +1,13 @@
 <template>
-    <div class="cardDesign">
+    <div>
         <div v-for="card in selectedCard" :key="card.id">
-          <div class="cardGrid" v-bind:style="{ background: card.color }">
-                <p class="cardNumber">{{card.cardnumber}}</p>
-                <p class="cardValid">{{card.valid}}</p>
-                <p class="cardHolder">{{card.holder}}</p>
+          <div class="cardDesign" v-bind:style="{ background: card.color }">
                 <p class="cardVendor">{{card.vendor}}</p>
+                <p class="cardNumber">{{card.cardnumber}}</p>
+                <p class="holderTitle">CARDHOLDER NAME</p>
+                <p class="cardHolder">{{card.holder}}</p>
+                <p class="validTitle">VALID THRU</p>
+                <p class="cardValid">{{card.valid}}</p>
             </div>
         </div>
     </div>
@@ -22,39 +24,64 @@ export default {
 
 <style scoped>
      
-     .cardDesign {     
-        height: 100%;
-        border: 1px black solid;
-        border-radius: 3px;
-        
-    }
+    .cardDesign {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 325px;
+        height: 200px;
+        text-align: left;
+        padding: 30px;
+        margin-bottom: 50px;
+        color: #fff;
+        border-radius: 8px;
+        box-sizing: border-box;
+        }
 
-    .cardGrid {
-        display: grid;
-        width: 100%;
+    .cardVendor {
+        position: absolute;
+        right: 10px;
+        bottom: 160px;
     }
 
     .cardNumber {
-        grid-row: 2;
-        margin: 0.2rem;
-    }
-
-    .cardValid {
-        grid-row: 3;
-        margin: 0.2rem;
+        font-size: 25px;
+        padding: 20px 0 15px;
+        text-align: center;
     }
 
     .cardHolder {
-        grid-row: 4;
-        margin: 0.2rem;
+        position: absolute;
+        font-size: 18px;
+        right: 170px;
+        bottom: 10px;
+        width: 50%;
+        text-align: center;
     }
 
-    .cardVendor {
-        grid-row: 1;
-        text-align: right;
-        margin-right: 5px;
-        margin-top: 0.2rem;
-        margin-bottom: 0.2rem;
+    .cardValid {
+        position: absolute;
+        font-size: 18px;
+        right: 30px;
+        bottom: 10px;
+        text-align: center;
     }
+    
+    .holderTitle {
+        position: absolute;
+        font-size: 11px;
+        right: 200px;
+        bottom: 45px;
+        text-align: center;
+    }
+
+    .validTitle {
+        position: absolute;
+        font-size: 11px;
+        right: 20px;
+        bottom: 45px;
+        text-align: center;
+    }
+
 
 </style>

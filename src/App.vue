@@ -17,7 +17,7 @@ export default {
           id: 1,
           vendor: "Bitcoin Inc",
           holder: "John Doe",
-          cardnumber: "123456789101112",
+          cardnumber: "1234 5678 9101 1112",
           valid: "12/22",
           isActive: true,
           color: "#EA8C2B"
@@ -26,7 +26,7 @@ export default {
           id: 2,
           vendor: "Ninja Bank",
           holder: "John Doe",
-          cardnumber: "123456789101112",
+          cardnumber: "1234 5678 9101 1112",
           valid: "12/22",
           isActive: false,
           color: "#559F7A"
@@ -35,7 +35,7 @@ export default {
           id: 3,
           vendor: "Block Chain Inc",
           holder: "John Doe",
-          cardnumber: "123456789101112",
+          cardnumber: "1234 5678 9101 1112",
           valid: "12/22",
           isActive: false,
           color: "#262E5D"
@@ -44,7 +44,7 @@ export default {
           id: 4,
           vendor: "Evil Corp",
           holder: "John Doe",
-          cardnumber: "123456789101112",
+          cardnumber: "1234 5678 9101 1112",
           valid: "12/22",
           isActive: false,
           color: "#141518"
@@ -66,5 +66,10 @@ export default {
   body {
     font-family: Arial, Helvetica, sans-serif;
   }
+
+  h1 {
+    text-align: center;
+  }
+
 
 </style>

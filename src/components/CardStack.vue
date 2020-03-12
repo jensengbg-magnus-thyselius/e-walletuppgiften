@@ -1,8 +1,8 @@
 <template>
-    <div class="cardGrid">
+    <div>
         <div v-for="card in cards" :key="card.id">
             <div v-if="card.isActive == false">
-                  <Card class="cardOverlap" v-bind:selectedCard="{card}" v-bind:style="{ s }"
+                  <Card class="cardOverlap" v-bind:selectedCard="{card}"
                      v-on:click.native="makeActive(cards, card)"/>
             </div>
         </div>
@@ -37,12 +37,6 @@
 </script>
 
 <style scoped>
-
-.cardGrid{
-    display: inline-flex;
-    flex-direction: column;
-    width: 10%;
-}
 
 .cardOverlap {
     margin-top: -40%;

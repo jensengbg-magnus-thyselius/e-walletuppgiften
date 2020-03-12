@@ -1,21 +1,22 @@
 <template>
 <div class="homewrapper">
     <div class="header">
-        <p>header</p>
+        <div>
+            <h1>E-WALLET</h1>
+        </div>
     </div>
         <div class="activecard" v-for="card in cards" :key="card.id">
             <div v-if="card.isActive == true">
-                <div class="cardSize">
+                <div>
                 <Card v-bind:selectedCard="{card}"/>
                 </div>
             </div>
-            <!-- v-for="card in cards" :key="card.id" -->
         </div>
     <div class="cardstack">
         <CardStack v-bind:cards="cards"/>
     </div>
     <div class="addnew">
-        <router-link to="/addcard"><button>Add new card</button></router-link>
+        <router-link to="/addcard"><button class="btn">ADD A NEW CARD</button></router-link>
         
     </div>
 </div>
@@ -39,9 +40,10 @@ export default {
 .homewrapper {
     height: 100vh;
     width: 100vw;
-    border:3px black solid;
     display: grid;
+    justify-content: center;
     padding: 0;
+    margin: 0;
     grid-template-areas:
     "header"
     "activecard"
@@ -49,27 +51,43 @@ export default {
     "addnew";
 }
 
-.cardSize {
-    display: inline-flex;
-    flex-direction: column;
-    width: 10%;
-}
-
 .header {
-grid-area: header;
+    grid-area: header;
+    height: 20%;
+    width: 100%;
+
 }
 
 .activecard {
-grid-area: activecard;
-margin-bottom: 10%;
+    grid-area: activecard;
+    height: 30%;
+    width: 100%;
+    margin-bottom: 50%;
+
 }
 
 .cardstack {
-grid-area: cardstack;
+    grid-area: cardstack;
+    height: 30%;
+    width: 100%;
+
 }
 
 .addnew {
-grid-area: addnew;
+    grid-area: addnew;
+    height: 20%;
+    width: 100%;
+
+}
+
+.btn {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid black;
 }
 
 </style>
