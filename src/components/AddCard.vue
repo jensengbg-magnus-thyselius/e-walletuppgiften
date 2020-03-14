@@ -40,7 +40,6 @@ export default {
                         "isActive": false,
                         "color": "#4FC08D"
                   })
-                alert(cards)
             }       
     }
 }  
